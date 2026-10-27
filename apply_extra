@@ -1,7 +1,9 @@
 #!/bin/sh
 # Runs once when the app is installed, in /app/extra, where Flatpak has put
 # the Linux tarball it downloaded from the project's GitHub release. The
-# app's bin/ and share/ in the index link into here.
+# app's bin/ and share/ in the index link into here. Installs for every
+# account run this as root, where tar would try to give the files their
+# owner in the tarball, which Flatpak's sandbox doesn't allow.
 set -e
-tar -xzf release.tar.gz --strip-components=1
+tar -xzf release.tar.gz --strip-components=1 --no-same-owner
 rm -f release.tar.gz

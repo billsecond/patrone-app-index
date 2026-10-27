@@ -9,8 +9,9 @@
 #
 #   build-index.sh REPO [GPG-KEY-ID]
 #
-# REPO is made if it's missing. An app whose release hasn't changed keeps its
-# commit, so installed copies aren't updated for nothing. Needs curl, jq,
+# REPO is made if it's missing. An app whose release (and apply_extra)
+# hasn't changed keeps its commit, so installed copies aren't updated for
+# nothing. Needs curl, jq,
 # ostree and flatpak; GITHUB_TOKEN, if set, goes to GitHub's API, and
 # GPG_HOMEDIR to the signing.
 set -euo pipefail
@@ -57,7 +58,8 @@ while read -r project id prefix; do
         sum=$(curl -fsSL "$url" | sha256sum | cut -d' ' -f1)
     fi
     ref=app/$id/x86_64/stable
-    if ostree --repo="$repo" cat "$ref" /metadata 2>/dev/null | grep -qx "checksum=$sum"; then
+    if ostree --repo="$repo" cat "$ref" /metadata 2>/dev/null | grep -qx "checksum=$sum" &&
+       ostree --repo="$repo" cat "$ref" /files/bin/apply_extra 2>/dev/null | cmp -s - "$here/apply_extra"; then
         echo "$id: $tag is indexed already"
         continue
     fi
