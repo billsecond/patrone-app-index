@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [apps.list, build-index.sh, apply_extra, patrone-app-index.flatpakrepo]
+    paths: [apps.list, build-index.sh, apply_extra, patrone-app-index.flatpakrepo, .github/workflows/update.yml]
 
 permissions:
   contents: write
@@ -27,10 +27,11 @@ jobs:
   update:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
+      # librsvg2-common: flatpak build-export checks SVG icons with gdk-pixbuf.
       - name: Install Flatpak and OSTree
-        run: sudo apt-get update && sudo apt-get install -y flatpak ostree jq
+        run: sudo apt-get update && sudo apt-get install -y flatpak ostree jq librsvg2-common
 
       - name: Get the published index
         run: git clone -q --depth 1 --branch gh-pages "https://github.com/$GITHUB_REPOSITORY" site || mkdir site
