@@ -1,0 +1,20 @@
+# The apps in Patrone's app index, one per line:
+#   GitHub project              app ID                               release file prefix
+# Each project's latest release must carry <prefix>-<version>-linux-x86_64.tar.gz
+# (the app, downloaded at install time) and <prefix>-<version>-linux-x86_64.flatpak
+# (read once, for the app's listing and permissions).
+storytold/photocraft            ai.storyteller.photocraft            photocraft
+storytold/pdfcraft              ai.storyteller.pdfcraft              pdfcraft
+storytold/filmcraft             ai.storyteller.filmcraft             filmcraft
+storytold/wordcraft             ai.storyteller.wordcraft             wordcraft
+storytold/lightcraft            ai.storyteller.lightcraft            lightcraft
+storytold/vectorcraft           ai.storyteller.vectorcraft           vectorcraft
+storytold/effectcraft           ai.storyteller.effectcraft           effectcraft
+storytold/cadcraft              ai.storyteller.cadcraft              cadcraft
+storytold/gridcraft             ai.storyteller.gridcraft             gridcraft
+storytold/designcraft           ai.storyteller.designcraft           designcraft
+storytold/deckcraft             ai.storyteller.deckcraft             deckcraft
+storytold/soundcraft            ai.storyteller.soundcraft            soundcraft
+storytold/figcraft              ai.storyteller.figcraft              figcraft
+storytold/craft-launcher        ai.storyteller.artcraft-launcher     artcraft-launcher
+UCS-Care-Group/mailcraft        io.github.billsecond.mailcraft       mailcraft
