@@ -42,7 +42,12 @@ api() {
 while read -r project id prefix; do
     [[ -z $project || $project == \#* ]] && continue
     listed+="$id "
-    release=$(api "repos/$project/releases/latest")
+    # A project that can't be read (a private repository, say) keeps what the
+    # index has for it, and the other apps go on.
+    if ! release=$(api "repos/$project/releases/latest"); then
+        echo "$id: can't read $project's latest release, skipped" >&2
+        continue
+    fi
     tag=$(jq -r .tag_name <<<"$release")
     asset() { jq -ec --arg re "$1" 'first(.assets[] | select(.name | test($re)))' <<<"$release"; }
     if ! tarball=$(asset "^$prefix-[0-9].*-linux-x86_64\\.tar\\.gz\$") ||
