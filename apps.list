@@ -17,6 +17,7 @@ storytold/deckcraft             ai.storyteller.deckcraft             deckcraft
 storytold/soundcraft            ai.storyteller.soundcraft            soundcraft
 storytold/figcraft              ai.storyteller.figcraft              figcraft
 UCS-Care-Group/mailcraft        io.github.billsecond.mailcraft       mailcraft
+billsecond/screengrabcraft      io.github.billsecond.screengrabcraft screengrabcraft
 # Not storytold/craft-launcher (ArtCraft Launcher): its icon is the ArtCraft
 # Team's trademarked "A", which their NOTICE keeps out of the open-source
 # licence. Back when they allow it.

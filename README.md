@@ -9,8 +9,10 @@ project's own release, checks it against the checksum and unpacks it. This
 is Flatpak's "extra data", which Flathub uses for Spotify and Zoom.
 
 The apps are the Craft apps: storytold's
-([github.com/storytold](https://github.com/storytold)) and MailCraft
-([UCS-Care-Group/mailcraft](https://github.com/UCS-Care-Group/mailcraft)).
+([github.com/storytold](https://github.com/storytold)), MailCraft
+([UCS-Care-Group/mailcraft](https://github.com/UCS-Care-Group/mailcraft)) and
+ScreenGrabCraft
+([billsecond/screengrabcraft](https://github.com/billsecond/screengrabcraft)).
 
 ## How it stays current
 
@@ -33,7 +35,9 @@ the prefix of its release files. The project's releases must carry
 `<prefix>-<version>-linux-x86_64.tar.gz` and
 `<prefix>-<version>-linux-x86_64.flatpak`, as the Craft apps' releases do.
 Pushing the change runs the job. An app taken off the list leaves the index;
-copies already installed stay, without updates.
+copies already installed stay, without updates. A project the job can't read,
+such as a private repository, is skipped and the other apps go on, so it joins
+the index at the first run after it can be read.
 
 ## Building it by hand
 
