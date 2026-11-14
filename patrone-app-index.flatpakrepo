@@ -1,0 +1,7 @@
+[Flatpak Repo]
+Title=Patrone App Index
+Url=https://billsecond.github.io/patrone-app-index/repo/
+Homepage=https://github.com/billsecond/patrone-app-index
+Comment=Apps installed from their own projects' GitHub releases
+Description=Each app here is a listing and a link: installing it downloads the app from its project's GitHub release.
+GPGKey=mDMEauDmIhYJKwYBBAHaRw8BAQdA2h+vY/qORb/XXYC2hOjv3g4/j/c+KKhrSFWXIgCAWe60O1BhdHJvbmUgQXBwIEluZGV4IChnaXRodWIuY29tL2JpbGxzZWNvbmQvcGF0cm9uZS1hcHAtaW5kZXgpiJAEExYKADgWIQSlbKKlzItIN92Km9XgzTGzQMT//QUCauDmIgIbAwULCQgHAgYVCgkICwIEFgIDAQIeAQIXgAAKCRDgzTGzQMT//X1fAQCjpFROSr/kY7YFlkI4VyRZW2MDPGSvVh+lUmjX8BmahAD/YabaO9uxkpECDfbEtAlVObD1mT/7I0OiIipiui5uew4=
