@@ -23,6 +23,8 @@ billsecond/screengrabcraft      io.github.billsecond.screengrabcraft screengrabc
 billsecond/patrone-notepad      org.patrone.Notepad                  patrone-notepad
 billsecond/patrone-unpack       org.patrone.Unpack                   patrone-unpack
 billsecond/patrone-terminal     org.patrone.Terminal                 patrone-terminal
+billsecond/patrone-task-manager org.patrone.TaskManager              patrone-task-manager
+billsecond/patrone-file-manager org.patrone.FileManager              patrone-file-manager
 # Not storytold/craft-launcher (ArtCraft Launcher): its icon is the ArtCraft
 # Team's trademarked "A", which their NOTICE keeps out of the open-source
 # licence. Back when they allow it.

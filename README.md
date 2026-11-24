@@ -17,8 +17,12 @@ and Patrone's own apps as Flatpaks for any Linux: Notepad
 ([billsecond/patrone-notepad](https://github.com/billsecond/patrone-notepad))
 Patrone Unpack
 ([billsecond/patrone-unpack](https://github.com/billsecond/patrone-unpack))
-and Patrone Terminal
-([billsecond/patrone-terminal](https://github.com/billsecond/patrone-terminal)).
+Patrone Terminal
+([billsecond/patrone-terminal](https://github.com/billsecond/patrone-terminal)),
+Patrone Task Manager
+([billsecond/patrone-task-manager](https://github.com/billsecond/patrone-task-manager))
+and Patrone File Manager
+([billsecond/patrone-file-manager](https://github.com/billsecond/patrone-file-manager)).
 
 On any Linux with Flatpak, adding the index (and Flathub, for the
 runtimes) is all it takes:
