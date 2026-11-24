@@ -15,8 +15,10 @@ ScreenGrabCraft
 ([billsecond/screengrabcraft](https://github.com/billsecond/screengrabcraft)),
 and Patrone's own apps as Flatpaks for any Linux: Notepad
 ([billsecond/patrone-notepad](https://github.com/billsecond/patrone-notepad))
-and Patrone Unpack
-([billsecond/patrone-unpack](https://github.com/billsecond/patrone-unpack)).
+Patrone Unpack
+([billsecond/patrone-unpack](https://github.com/billsecond/patrone-unpack))
+and Patrone Terminal
+([billsecond/patrone-terminal](https://github.com/billsecond/patrone-terminal)).
 
 On any Linux with Flatpak, adding the index (and Flathub, for the
 runtimes) is all it takes:
