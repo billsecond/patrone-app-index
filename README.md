@@ -12,7 +12,20 @@ The apps are the Craft apps: storytold's
 ([github.com/storytold](https://github.com/storytold)), MailCraft
 ([UCS-Care-Group/mailcraft](https://github.com/UCS-Care-Group/mailcraft)) and
 ScreenGrabCraft
-([billsecond/screengrabcraft](https://github.com/billsecond/screengrabcraft)).
+([billsecond/screengrabcraft](https://github.com/billsecond/screengrabcraft)),
+and Patrone's own apps as Flatpaks for any Linux: Notepad
+([billsecond/patrone-notepad](https://github.com/billsecond/patrone-notepad))
+and Patrone Unpack
+([billsecond/patrone-unpack](https://github.com/billsecond/patrone-unpack)).
+
+On any Linux with Flatpak, adding the index (and Flathub, for the
+runtimes) is all it takes:
+
+```sh
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists patrone-app-index https://billsecond.github.io/patrone-app-index/patrone-app-index.flatpakrepo
+flatpak install patrone-app-index org.patrone.Notepad
+```
 
 ## How it stays current
 
